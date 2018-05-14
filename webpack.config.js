@@ -35,6 +35,8 @@ module.exports = {
 		filename: './bundle.js',
         path: path.resolve(__dirname, 'public'),
 	},
+
+	devtool: "source-map",
 	
 	module: {
 		rules: [
@@ -54,8 +56,17 @@ module.exports = {
 					}
 
 				]
-			}
-		]
-	},
-	plugins: plugins
+			},
+			{
+				test: /\.scss$/,
+            	use: [
+					{ loader: "style-loader" },
+					{
+					loader: "css-loader"}, 
+					{
+					loader: "sass-loader" 
+            }]
+        }]
+    }
 };
+				

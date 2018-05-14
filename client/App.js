@@ -1,23 +1,18 @@
 import React, { Component } from 'react';
 import io from 'socket.io-client';
-import styles from './App.css';
+import styles from './App.scss';
 
-import MessageForm from './MessageForm';
-import MessageList from './MessageList';
-import UsersList from './UsersList';
-import UserForm from './UserForm';
+import MessageForm from './MessageForm.scss';
+import MessageList from './MessageList.scss';
+import UsersList from './UsersList.scss';
+import UserForm from './UserForm.scss';
 
 const socket = io('/');
 
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            user: [], 
-            messages: [],
-            text: '', 
-            name: ''
-        };
+        this.state = {users: [], messages: [], text: '', name: ''};
     }
     componentDidMount() {
         socket.on('message', message => this.messageReceive(message));
@@ -42,7 +37,7 @@ class App extends Component {
     render() {
         return this.state.name !== '' ? (
             this.renderLayout()
-        ) : this.renderUserForm();
+            ) : this.renderUserForm();
     }
     renderLayout() {
         return (
@@ -74,10 +69,7 @@ class App extends Component {
     }
     renderUserForm() {
         return (
-            <UserForm onUserSubmit = {name => 
-                this.handleUserSubmit(name)} 
-            />
-        );
+            <UserForm onUserSubmit = {name => this.handleUserSubmit(name)}/>);
     }
 };
 
