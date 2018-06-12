@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import io from 'socket.io-client';
 import styles from './App.scss';
 
-import MessageForm from './MessageForm.scss';
-import MessageList from './MessageList.scss';
-import UsersList from './UsersList.scss';
-import UserForm from './UserForm.scss';
+import MessageForm from './MessageForm';
+import MessageList from './MessageList';
+import UsersList from './UsersList';
+import UserForm from './UserForm';
 
 const socket = io('/');
 
@@ -69,7 +69,7 @@ class App extends Component {
     }
     renderUserForm() {
         return (
-            <UserForm onUserSubmit = {name => this.handleUserSubmit(name)}/>);
+            <UserForm onUserSubmit={name => this.handleUserSubmit(name)}/>);
     }
 };
 

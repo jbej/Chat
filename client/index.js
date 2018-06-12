@@ -20,4 +20,4 @@ if(module.hot){
         const NewApp = require('./App.js').default;
         render(NewApp)
     });
-};
+}

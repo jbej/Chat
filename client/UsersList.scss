@@ -4,21 +4,23 @@
     width: 25vw;
     justify-content: flex-start;
     flex-direction: column;
-    border-right: 1px solid lightseagreen;
-    background-color: aliceblue;
-    .UsersOnline {
+    border-right: 1px solid #ccc;
+    background-color: #868471;
+    color: white;
+    .Online {
         padding: 20px;
         text-align: center;
-        background: #ccc;
-        font-weight: bold;
+        background: rgba(189, 189, 189, 0.45);
     }
-    .UserItem {
+    .List {
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+    }
+    .Item {
         list-style: none;
         border-bottom: 1px solid #ccc;
         padding: 20px;
-    }
-    .UsersList {
-        margin: 0;
-        padding: 0;
+        margin: 0 0 0 20px;
     }
 }
