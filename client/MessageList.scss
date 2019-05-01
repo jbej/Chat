@@ -1,0 +1,16 @@
+.Message {
+    display: inline-block;
+    margin-bottom: 10px;
+    position: relative;
+    background-color: lightcyan;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+}
+
+.MessageList {
+    flex: 1;
+    width: 75vw;
+    padding: 20px;
+    box-sizing: border-box;
+}
